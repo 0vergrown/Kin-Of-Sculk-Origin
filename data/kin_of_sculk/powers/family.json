@@ -1,0 +1,64 @@
+{
+	"name":"Family",
+	"description":"Its like having siblings but they like you.",
+	"badges":[
+		{
+		   "type":"origins:tooltip",
+		   "sprite":"origins:textures/gui/badge/info.png",
+		   "text":"Wardens Are Friendly To You."
+		}
+	 ],
+	"type":"origins:multiple",
+	"create_team":{
+	   "type":"origins:action_on_callback",
+	   "entity_action_chosen":{
+		  "type":"origins:and",
+		  "actions":[
+			 {
+				"type":"origins:execute_command",
+				"command":"team add kin_of_sculk_family.passive"
+			 },
+			 {
+				"type":"origins:execute_command",
+				"command":"team join kin_of_sculk_family.passive @s"
+			 }
+		  ]
+	   },
+	   "entity_action_added":{
+		  "type":"origins:execute_command",
+		  "command":"team join kin_of_sculk_family.passive @s"
+	   },
+	   "entity_action_removed":{
+		  "type":"origins:execute_command",
+		  "command":"team leave kin_of_sculk_family.passive @s"
+	   },
+	   "entity_action_respawned":{
+		  "type":"origins:execute_command",
+		  "command":"team join kin_of_sculk_family.passive @s"
+	   },
+	   "execute_chosen_when_orb":true
+	},
+	"add_to_team":{
+	   "type":"origins:action_over_time",
+	   "entity_action":{
+		  "type":"origins:area_of_effect",
+		  "radius":20.00,
+		  "shape":"cube",
+		  "bientity_action":{
+			 "type":"origins:target_action",
+			 "action":{
+				"type":"origins:execute_command",
+				"command":"team join kin_of_sculk_family.passive @s"
+			 }
+		  },
+		  "bientity_condition":{
+			 "type":"origins:target_condition",
+			 "condition":{
+				"type":"origins:entity_type",
+				"entity_type":"minecraft:warden"
+			 }
+		  }
+	   },
+	   "interval":1
+	}
+}

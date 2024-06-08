@@ -1,0 +1,30 @@
+{
+    "name":"One Within",
+    "description":"Don't let me stop you, cmon through.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You can walk freely through sculk based blocks."
+        }
+    ],
+    "type": "origins:phasing",
+    "blacklist": false,
+    "block_condition": {
+        "type": "origins:in_tag",
+        "tag": "kin_of_sculk:sculk_blocks"
+    },
+    "render_type": "none",
+    "view_distance": 10.00,
+    "phase_down_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:sneaking"
+            },
+            {
+                "type": "origins:on_block"
+            }
+        ]
+    }
+}

@@ -1,0 +1,49 @@
+{
+   "name":"Tough Skin",
+   "description":"Arrows don't work on you, though a sharper projectile may do reduced damage to you.",
+   "badges":[
+      {
+         "type":"origins:tooltip",
+         "sprite":"origins:textures/gui/badge/info.png",
+         "text":"Tridends do 1/4 of their normal damage to you."
+      }
+   ],
+   "type":"origins:multiple",
+   "more_trident_damage_taken":{
+      "type":"origins:modify_damage_taken",
+      "damage_condition": {
+         "type": "origins:or",
+         "conditions": [
+             {
+               "type": "origins:name",
+               "name": "trident"
+             },
+             {    
+               "type": "origins:name",
+               "name": "trident.item"
+             }
+         ]
+     },
+      "modifier":{
+         "operation":"multiply_base",
+         "value":0.8,
+         "name":"Tridents Do More Damage"
+      }
+   },
+   "invulnerability_to_arrows":{
+      "type":"origins:invulnerability",
+      "damage_condition": {
+         "type": "origins:or",
+         "conditions": [
+             {
+               "type": "origins:name",
+               "name": "arrow"
+             },
+             {    
+               "type": "origins:name",
+               "name": "arrow.item"
+             }
+         ]
+     }
+   }
+}

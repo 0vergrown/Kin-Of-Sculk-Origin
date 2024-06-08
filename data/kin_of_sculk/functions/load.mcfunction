@@ -1,0 +1,1 @@
+scoreboard objectives add kin_of_sculk.id dummy

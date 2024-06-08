@@ -1,0 +1,30 @@
+{
+    "name":"AHH FIRE",
+    "description":"It's gonna hurt.",
+    "badges":[
+       {
+          "type":"origins:tooltip",
+          "sprite":"origins:textures/gui/badge/info.png",
+          "text":"Extra fire damage and persists untill put out with water"
+       }
+    ],
+    "type":"origins:multiple",
+    "extra_fire_damage":{
+       "type":"origins:modify_damage_taken",
+       "modifier":{
+          "operation":"multiply_total",
+          "value":0.25
+       },
+       "damage_condition":{
+          "type":"origins:fire"
+       }
+    },
+    "persist_fire":{
+       "type":"origins:burn",
+       "interval":20,
+       "burn_duration":1000,
+       "condition":{
+          "type":"origins:on_fire"
+       }
+    }
+}

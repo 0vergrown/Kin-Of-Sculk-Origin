@@ -1,0 +1,12 @@
+{
+    "name": "Rough Start",
+    "description": "Want a safe place? Find one.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "This is bad due to \"Creature Of The Dark\"."
+        }
+    ],
+    "type": "origins:simple"
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Respectful",
+    "description": "You know not to bother them.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Silent, Dont Trigger Sculk Sensors And Wardens Can't Hear You Getting Up Shenanigans."
+        }
+    ],
+    "type": "origins:prevent_game_event",
+    "events":[
+        "minecraft:step",
+        "minecraft:hit_ground"
+    ]
+}

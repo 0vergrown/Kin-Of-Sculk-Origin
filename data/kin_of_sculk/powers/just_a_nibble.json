@@ -1,0 +1,37 @@
+{
+    "name":"Just A Nibble",
+    "description":"Make it last.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "While Inside Of A Sculk Catalyst You Gain A Shank Of Hunger Every 30 Seconds."
+        }
+    ],
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:feed",
+        "food": 2,
+        "saturation": 2
+    },
+    "interval": 600,
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:on_block",
+                "block_condition": {
+                    "type": "origins:block",
+                    "block": "minecraft:sculk_catalyst"
+                }
+            },
+            {    
+                "type": "origins:in_block",
+                "block_condition": {
+                    "type": "origins:block",
+                    "block": "minecraft:sculk_catalyst"
+                }
+            }
+        ]
+    }
+}

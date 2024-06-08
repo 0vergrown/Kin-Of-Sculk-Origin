@@ -1,0 +1,5 @@
+{
+    "description": "Prevents held item from being rendered in the armor stand",
+    "type": "apoli:prevent_feature_render",
+    "feature": "held_item"
+}

@@ -1,0 +1,84 @@
+{
+    "hidden":true,
+    "type":"apoli:multiple",
+    "resource":{
+      "type":"apoli:resource",
+      "min":0,
+      "max":100,
+      "hud_render": {
+         "should_render": false
+      },
+      "start_value":0,
+      "max_action":{
+         "type": "origins:revoke_power",
+         "power": "kin_of_sculk:charged_shot_deafened_target",
+         "source": "kin_of_sculk:charged_shot_deafened_target"
+      }
+   },
+    "deafen_and_timer_add":{
+       "type":"apoli:action_over_time",
+       "entity_action":{
+          "type":"apoli:and",
+          "actions":[
+             {
+                "type":"apoli:execute_command",
+                "command":"stopsound @s"
+             },
+             {
+               "type": "origins:change_resource",
+               "resource": "kin_of_sculk:charged_shot_deafened_target_resource",
+               "change": 1,
+               "operation": "add"
+             }
+          ]
+       },
+       "interval":1
+    },
+    "modify_movement":{
+       "type":"apoli:attribute",
+       "modifiers":[
+          {
+             "attribute":"generic.attack_damage",
+             "operation":"multiply_total",
+             "value":-0.5
+          },
+          {
+             "attribute":"generic.attack_speed",
+             "operation":"multiply_total",
+             "value":-0.5
+          },
+          {
+             "attribute":"generic.movement_speed",
+             "operation":"multiply_total",
+             "value":-0.7
+          }
+       ]
+    },
+    "blurry_vision":{
+       "type":"apoli:shader",
+       "shader":"minecraft:shaders/post/blobs2.json",
+       "toggleable":false
+    },
+    "red":{
+       "type":"apoli:overlay",
+       "texture":"minecraft:textures/block/red_concrete.png",
+       "draw_mode":"texture",
+       "draw_phase":"below_hud",
+       "red":0.5,
+       "green":0.2,
+       "blue":0.2,
+       "strength":0.7,
+       "hide_with_hud":false,
+       "visible_in_third_person":true
+    },
+    "particle":{
+       "type":"apoli:particle",
+       "particle":{
+          "type":"block",
+          "params":"red_concrete"
+       },
+       "speed":0.07,
+       "count":4,
+       "frequency":3
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:vex",
+        "minecraft:ender_dragon",
+        "minecraft:ghast",
+        "minecraft:bat",
+        "minecraft:phantom",
+        "minecraft:blaze",
+        "minecraft:wither",
+        "minecraft:armor_stand",
+        "minecraft:bee"
+    ]
+}

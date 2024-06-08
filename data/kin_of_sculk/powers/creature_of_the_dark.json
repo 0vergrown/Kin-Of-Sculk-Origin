@@ -1,0 +1,49 @@
+{
+    "name":"Creature Of The Dark",
+    "description":"Yeouch thats bright.",
+    "badges":[
+       {
+          "type":"origins:tooltip",
+          "sprite":"origins:textures/gui/badge/info.png",
+          "text":"Sunlight sets fire, and Weakness X, Hunger III"
+       }
+    ],
+    "type":"origins:multiple",
+    "set_on_fire":{
+       "type":"origins:action_over_time",
+       "entity_action":{
+          "type":"origins:set_on_fire",
+          "duration":5
+       },
+       "interval":20,
+       "condition":{
+          "type":"origins:exposed_to_sun"
+       }
+    },
+    "status_effect":{
+       "type":"origins:stacking_status_effect",
+       "min_stacks": -3,
+       "max_stacks": 1,
+       "duration_per_stack": 100,
+       "tick_rate": 20,
+       "effects":[
+          {
+             "effect":"minecraft:weakness",
+             "amplifier":9,
+             "is_ambient":true,
+             "show_particles":true,
+             "show_icon":true
+          },
+          {
+             "effect":"minecraft:hunger",
+             "amplifier":2,
+             "is_ambient":true,
+             "show_particles":true,
+             "show_icon":true
+          }
+       ],
+       "condition":{
+          "type":"origins:exposed_to_sun"
+       }
+    }
+}

@@ -1,0 +1,33 @@
+{
+	"powers": [
+		"kin_of_sculk:one_within",
+		"kin_of_sculk:charged_shot",
+		"kin_of_sculk:beheamoth_at_home",
+		"kin_of_sculk:family",
+		"kin_of_sculk:respectful",
+		"kin_of_sculk:tough_skin",
+		"kin_of_sculk:hypersonic_digging",
+		"kin_of_sculk:just_a_nibble",
+		"kin_of_sculk:cannibalistic_carnovore",
+		"kin_of_sculk:silktouchhands",
+		"kin_of_sculk:echolocation",
+		"kin_of_sculk:keen_ears",
+		"kin_of_sculk:true_catalyst",
+		"kin_of_sculk:rough_mits",
+		"kin_of_sculk:rough_start",
+		"kin_of_sculk:creature_of_the_dark",
+		"kin_of_sculk:famished",
+		"kin_of_sculk:the_bad_guy",
+		"kin_of_sculk:blind_to_the_world",
+		"kin_of_sculk:deafening_blasts",
+		"kin_of_sculk:confusing_contraptions",
+		"kin_of_sculk:ahh_fire",
+		"kin_of_sculk:smoll"
+	],
+	"icon": "minecraft:recovery_compass",
+	"unchoosable": true,
+	"order": 10,
+	"impact": 3,
+	"name": "Kin of Sculk",
+	"description": "DESCRIPTION HERE"
+}

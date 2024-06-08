@@ -1,0 +1,20 @@
+{
+  "type": "block",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone"
+          }
+        ],
+        "functions": [
+          {
+            "function": "minecraft:set_nbt",
+            "tag": "{SilkTouch:1b}"
+          }
+        ]
+      }
+    ]
+  }

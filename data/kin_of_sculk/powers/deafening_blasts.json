@@ -1,0 +1,87 @@
+{
+    "name":"Deafening Blasts",
+    "description":"You don't know what they're wearing nor do you care.",
+    "badges":[
+       {
+          "type":"origins:tooltip",
+          "sprite":"origins:textures/gui/badge/info.png",
+          "text":"Loud sounds such as rain, thunder, tnt, and fireworks of course hurt even if not hit"
+       },
+       {
+          "type":"origins:tooltip",
+          "sprite":"origins:textures/gui/badge/info.png",
+          "text":"Rain lowers health slowly until at 1 heart similarly to poison and Triggers shivering effect"
+       }
+    ],
+    "type":"origins:multiple",
+    "rain_damage":{
+       "type":"origins:damage_over_time",
+       "interval":20,
+       "onset_delay":1,
+       "damage":2,
+       "damage_easy":1,
+       "damage_type":"origins:hurt_by_water",
+       "protection_enchantment":"origins:water_protection",
+       "protection_effectiveness":1.0,
+       "condition":{
+          "type":"origins:and",
+          "conditions":[
+             {
+                "type":"origins:health",
+                "comparison":">=",
+                "compare_to":3
+             },
+             {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                     "type": "origins:predicate",
+                     "predicate": "kin_of_sculk:weather/is_thunderstorm"
+                    },
+                    {    
+                        "type": "origins:in_rain"
+                    }
+                ]
+             }
+          ]
+       }
+    },
+    "more_damage_to_tnt_and_fireworks":{
+       "type":"origins:modify_damage_taken",
+       "damage_condition":{
+          "type":"origins:or",
+          "conditions":[
+             {
+                "type":"origins:name",
+                "name":"explosion"
+             },
+             {
+                "type":"origins:name",
+                "name":"explosion.player"
+             },
+             {
+                "type":"origins:name",
+                "name":"fireworks"
+             },
+             {
+                "type":"origins:name",
+                "name":"fireworks.player"
+             },
+             {
+                "type":"origins:name",
+                "name":"fireworks.item"
+             }
+          ]
+       },
+       "modifier":{
+          "operation":"multiply_total",
+          "value":2
+       }
+    },
+    "shiver":{
+        "type": "origins:shaking",
+        "condition": {
+            "type": "origins:in_rain"
+        }
+    }
+}
